@@ -1,77 +1,77 @@
 {
-  "as_of": "2026-09-02T06:37:05+00:00",
+  "as_of": "2026-09-02T22:52:05+00:00",
   "stale_threshold_minutes": 90,
   "system": {
     "total_mb": 921,
-    "used_mb": 166,
-    "available_mb": 754,
-    "disk_avail_gb": 8.42
+    "used_mb": 165,
+    "available_mb": 755,
+    "disk_avail_gb": 8.43
   },
   "jobs": [
     {
       "name": "dashboard-summarize-cron.log",
       "last_line": "",
       "last_modified": "2026-08-28T12:00:01+00:00",
-      "minutes_since_update": 6877.1
+      "minutes_since_update": 7852.1
     },
     {
       "name": "fetch-daemon.log",
       "last_line": "  ✓ Features → data/meta/features_cycles.json",
-      "last_modified": "2026-09-02T06:07:51+00:00",
-      "minutes_since_update": 29.2
+      "last_modified": "2026-09-02T18:22:48+00:00",
+      "minutes_since_update": 269.3
     },
     {
       "name": "heavy-wrapper-skips.log",
       "last_line": "2026-08-27T23:50:22-06:00 saltado, lock ocupado tras 2s: echo no debería imprimirse",
       "last_modified": "2026-08-28T05:50:22+00:00",
-      "minutes_since_update": 7246.7
+      "minutes_since_update": 8221.7
     },
     {
       "name": "numerai-signals-score-cron.log",
-      "last_line": "2026-09-01T09:45:01  ABORTA: snapshot tiene 24.3h de antigüedad (máx 20h) — mejor no someter con datos viejos",
-      "last_modified": "2026-09-01T15:45:01+00:00",
-      "minutes_since_update": 892.1
+      "last_line": "2026-09-02T09:45:02  ABORTA: snapshot tiene 24.3h de antigüedad (máx 20h) — mejor no someter con datos viejos",
+      "last_modified": "2026-09-02T15:45:02+00:00",
+      "minutes_since_update": 427.1
     },
     {
       "name": "numerai-signals-score.log",
-      "last_line": "2026-09-01T09:45:01  ABORTA: snapshot tiene 24.3h de antigüedad (máx 20h) — mejor no someter con datos viejos",
-      "last_modified": "2026-09-01T15:45:01+00:00",
-      "minutes_since_update": 892.1
+      "last_line": "2026-09-02T09:45:02  ABORTA: snapshot tiene 24.3h de antigüedad (máx 20h) — mejor no someter con datos viejos",
+      "last_modified": "2026-09-02T15:45:02+00:00",
+      "minutes_since_update": 427.1
     },
     {
       "name": "numerai-signals-submit-cron.log",
-      "last_line": "2026-09-01T09:47:02  DRY-RUN — no se sube nada (falta --live, o todavía en fase de validación del spec)",
-      "last_modified": "2026-09-01T15:47:13+00:00",
-      "minutes_since_update": 889.9
+      "last_line": "2026-09-02T09:47:02  DRY-RUN — no se sube nada (falta --live, o todavía en fase de validación del spec)",
+      "last_modified": "2026-09-02T15:47:13+00:00",
+      "minutes_since_update": 424.9
     },
     {
       "name": "numerai-signals-submit.log",
-      "last_line": "2026-09-01T09:47:02  DRY-RUN — no se sube nada (falta --live, o todavía en fase de validación del spec)",
-      "last_modified": "2026-09-01T15:47:02+00:00",
-      "minutes_since_update": 890.1
+      "last_line": "2026-09-02T09:47:02  DRY-RUN — no se sube nada (falta --live, o todavía en fase de validación del spec)",
+      "last_modified": "2026-09-02T15:47:02+00:00",
+      "minutes_since_update": 425.1
     },
     {
       "name": "pi-failover-cron.log",
-      "last_line": "2026-09-02T00:30:02  Mac despierto — no hago nada",
-      "last_modified": "2026-09-02T06:30:02+00:00",
-      "minutes_since_update": 7.1
+      "last_line": "2026-09-02T16:45:07    Nada que hacer (sin posiciones abiertas, no es ventana de killswitch)",
+      "last_modified": "2026-09-02T22:45:07+00:00",
+      "minutes_since_update": 7.0
     },
     {
       "name": "pi-failover.log",
-      "last_line": "2026-09-02T00:30:02  Mac despierto — no hago nada",
-      "last_modified": "2026-09-02T06:30:02+00:00",
-      "minutes_since_update": 7.1
+      "last_line": "2026-09-02T16:45:07    Nada que hacer (sin posiciones abiertas, no es ventana de killswitch)",
+      "last_modified": "2026-09-02T22:45:07+00:00",
+      "minutes_since_update": 7.0
     },
     {
       "name": "shadow-base.log",
       "last_line": "    ABRIENDO ISRG         DN | consenso=68% edge=17% | $1060",
       "last_modified": "2026-08-28T15:18:51+00:00",
-      "minutes_since_update": 6678.2
+      "minutes_since_update": 7653.2
     },
     {
       "name": "health-monitor.log",
-      "last_line": "✅ 2026-09-02 06:30 UTC — ok",
-      "last_modified": "2026-09-02T06:30:02+00:00",
+      "last_line": "⚠️ 2026-09-02 22:45 UTC — fallo #34: HTTP Error 530: <none>",
+      "last_modified": "2026-09-02T22:45:02+00:00",
       "minutes_since_update": 7.0
     }
   ]
