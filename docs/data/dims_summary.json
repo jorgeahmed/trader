@@ -1,0 +1,304 @@
+{
+  "as_of": "2026-09-02T06:37:05+00:00",
+  "total_active": 4297,
+  "edge_distribution": {
+    "-0.25": 1,
+    "-0.20": 2,
+    "-0.15": 15,
+    "-0.10": 108,
+    "-0.05": 22,
+    "0.00": 44,
+    "0.05": 1067,
+    "0.10": 2073,
+    "0.15": 606,
+    "0.20": 232,
+    "0.25": 88,
+    "0.30": 30,
+    "0.35": 5,
+    "0.40": 4
+  },
+  "top_dims": [
+    {
+      "dim_id": "xcorr_vix_lag1_lin",
+      "symbol": "LIN",
+      "edge": 0.4,
+      "accuracy": 0.9,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_aapl_lag3_eog",
+      "symbol": "EOG",
+      "edge": 0.4,
+      "accuracy": 0.9,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_jpm_lag6_isrg",
+      "symbol": "ISRG",
+      "edge": 0.4,
+      "accuracy": 0.9,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_mrk_lag6_isrg",
+      "symbol": "ISRG",
+      "edge": 0.4,
+      "accuracy": 0.9,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_spy_lag7_sbux",
+      "symbol": "SBUX",
+      "edge": 0.35,
+      "accuracy": 0.85,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_nvda_lag7_hon",
+      "symbol": "HON",
+      "edge": 0.35,
+      "accuracy": 0.85,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_iwm_lag4_isrg",
+      "symbol": "ISRG",
+      "edge": 0.35,
+      "accuracy": 0.85,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_lly_lag5_blk",
+      "symbol": "BLK",
+      "edge": 0.35,
+      "accuracy": 0.85,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_eog_lag5_lmt",
+      "symbol": "LMT",
+      "edge": 0.35,
+      "accuracy": 0.85,
+      "n": 20
+    },
+    {
+      "dim_id": "rsi_os_30_googl",
+      "symbol": "GOOGL",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_eurusdx_lag1_fcx",
+      "symbol": "FCX",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_usdmxnx_lag2_lin",
+      "symbol": "LIN",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_mxx_lag1_meta",
+      "symbol": "META",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_femsaubd_mx_lag1_v",
+      "symbol": "V",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_femsaubd_mx_lag1_ge",
+      "symbol": "GE",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_spy_lag7_duk",
+      "symbol": "DUK",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_jnj_lag5_nvda",
+      "symbol": "NVDA",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_gspc_lag5_ko",
+      "symbol": "KO",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_fcx_lag7_lin",
+      "symbol": "LIN",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_amxb_mx_lag4_meta",
+      "symbol": "META",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    }
+  ],
+  "bottom_dims": [
+    {
+      "dim_id": "xcorr_jpm_lag3_ief",
+      "symbol": "IEF",
+      "edge": -0.1,
+      "accuracy": 0.4,
+      "n": 40
+    },
+    {
+      "dim_id": "xcorr_bac_lag3_hyg",
+      "symbol": "HYG",
+      "edge": -0.1,
+      "accuracy": 0.4,
+      "n": 40
+    },
+    {
+      "dim_id": "rsi_os_25_cvx",
+      "symbol": "CVX",
+      "edge": -0.1316,
+      "accuracy": 0.3684,
+      "n": 20
+    },
+    {
+      "dim_id": "rsi_os_35_cvx",
+      "symbol": "CVX",
+      "edge": -0.1316,
+      "accuracy": 0.3684,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_vix_lag1_ko",
+      "symbol": "KO",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_usdmxnx_lag2_nee",
+      "symbol": "NEE",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_amxb_mx_lag1_ge",
+      "symbol": "GE",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_femsaubd_mx_lag2_gs",
+      "symbol": "GS",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_gmexicob_mx_lag3_spy",
+      "symbol": "SPY",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_eurusdx_lag5_msft",
+      "symbol": "MSFT",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_eurusdx_lag3_amzn",
+      "symbol": "AMZN",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_eurusdx_lag4_ge",
+      "symbol": "GE",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_usdmxnx_lag4_lin",
+      "symbol": "LIN",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_dx-y_nyb_lag4_vix",
+      "symbol": "^VIX",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_spy_lag5_qqq",
+      "symbol": "QQQ",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_msft_lag3_pg",
+      "symbol": "PG",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_wmt_lag3_unh",
+      "symbol": "UNH",
+      "edge": -0.15,
+      "accuracy": 0.35,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_vix_lag2_iwm",
+      "symbol": "IWM",
+      "edge": -0.2,
+      "accuracy": 0.3,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_amxb_mx_lag3_meta",
+      "symbol": "META",
+      "edge": -0.2,
+      "accuracy": 0.3,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_mxx_lag5_wmt",
+      "symbol": "WMT",
+      "edge": -0.25,
+      "accuracy": 0.25,
+      "n": 20
+    }
+  ]
+}
