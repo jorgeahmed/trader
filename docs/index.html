@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trader — Resultados</title>
+<script src="chart.min.js"></script>
+<style>
+  :root { color-scheme: dark; }
+  body { font-family: system-ui, sans-serif; background:#111318; color:#e6e6e6; margin:0; padding:16px; }
+  h1 { font-size:1.2rem; margin:0 0 4px; }
+  #updated { color:#8a8f98; font-size:0.8rem; margin-bottom:16px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(340px,1fr)); gap:16px; }
+  .card { background:#1a1d24; border-radius:10px; padding:14px; }
+  .card h2 { font-size:0.95rem; margin:0 0 10px; color:#c7cbd4; }
+  table { width:100%; border-collapse:collapse; font-size:0.82rem; }
+  td, th { padding:4px 6px; border-bottom:1px solid #2a2e37; text-align:left; }
+  .ok { color:#4caf50; } .stale { color:#e0a030; }
+  canvas { max-height:280px; }
+</style>
+</head>
+<body>
+<h1>Trader — resultados (actualizado una vez al día)</h1>
+<div id="updated">cargando…</div>
+<div class="grid">
+  <div class="card"><h2>P&amp;L por book</h2><canvas id="pnlChart"></canvas></div>
+  <div class="card"><h2>Distribución de edge — dims activos</h2><canvas id="dimsChart"></canvas></div>
+  <div class="card"><h2>Top / bottom dims por edge</h2><table id="dimsTable"></table></div>
+  <div class="card"><h2>Salud del sistema (al momento del snapshot)</h2><table id="healthTable"></table></div>
+</div>
+<script>
+const PALETTE = ["#4c8bf5","#e0a030","#4caf50","#e05555","#9b6be0","#3ec6c6","#e07ac0","#a0a840","#7a90b0","#d97b3f"];
+let pnlChart, dimsChart;
+
+function esc(s) {
+  return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+async function j(url) { const r = await fetch(url); return r.json(); }
+
+async function loadPnl() {
+  const data = await j('data/pnl_summary.json');
+  const datasets = (data.books || []).map((b, i) => ({
+    label: b.name, data: b.equity_series,
+    borderColor: PALETTE[i % PALETTE.length],
+    spanGaps: true, tension: 0.15,
+  }));
+  const chartData = { labels: data.dates || [], datasets };
+  if (pnlChart) { pnlChart.data = chartData; pnlChart.update(); }
+  else {
+    pnlChart = new Chart(document.getElementById('pnlChart'), {
+      type: 'line', data: chartData,
+      options: { responsive: true, interaction: { mode: 'index', intersect: false } },
+    });
+  }
+}
+
+async function loadDims() {
+  const data = await j('data/dims_summary.json');
+  const buckets = data.edge_distribution || {};
+  const chartData = {
+    labels: Object.keys(buckets),
+    datasets: [{ label: 'dims activos', data: Object.values(buckets), backgroundColor: '#4c8bf5' }],
+  };
+  if (dimsChart) { dimsChart.data = chartData; dimsChart.update(); }
+  else { dimsChart = new Chart(document.getElementById('dimsChart'), { type: 'bar', data: chartData }); }
+
+  const table = document.getElementById('dimsTable');
+  const row = (d) => `<tr><td>${esc(d.dim_id)}</td><td>${esc(d.symbol)}</td><td>${esc((d.edge ?? 0).toFixed(3))}</td><td>${esc((d.accuracy ?? 0).toFixed(2))}</td></tr>`;
+  table.innerHTML = '<tr><th>dim</th><th>symbol</th><th>edge</th><th>acc</th></tr>' +
+    (data.top_dims || []).map(row).join('') +
+    (data.bottom_dims || []).map(row).join('');
+
+  document.getElementById('updated').textContent =
+    `dims activos: ${data.total_active ?? '—'} — snapshot del ${esc(data.as_of ?? '—')}`;
+}
+
+async function loadHealth() {
+  const data = await j('data/health_summary.json');
+  const table = document.getElementById('healthTable');
+  const threshold = data.stale_threshold_minutes ?? 90;
+  table.innerHTML = '<tr><th>job</th><th>última línea</th><th>hace (al momento del snapshot)</th></tr>' +
+    (data.jobs || []).map(job => {
+      const mins = job.minutes_since_update;
+      const cls = (mins == null || mins > threshold) ? 'stale' : 'ok';
+      return `<tr class="${cls}"><td>${esc(job.name)}</td><td>${esc(job.last_line)}</td><td>${esc(mins ?? '—')} min</td></tr>`;
+    }).join('');
+}
+
+async function loadAll() { await Promise.all([loadPnl(), loadDims(), loadHealth()]); }
+loadAll();
+</script>
+</body>
+</html>
