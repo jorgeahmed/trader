@@ -3,28 +3,67 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Trader — Resultados</title>
-<script src="chart.min.js"></script>
+<title>Trader Research — evidencia antes que narrativa</title>
+<script src="chart.min.js?v=2"></script>
 <style>
-  :root { color-scheme: dark; }
-  body { font-family: system-ui, sans-serif; background:#111318; color:#e6e6e6; margin:0; padding:16px; }
-  h1 { font-size:1.2rem; margin:0 0 4px; }
-  #updated { color:#8a8f98; font-size:0.8rem; margin-bottom:16px; }
+  :root { color-scheme:dark; --bg:#090b10; --panel:#12151c; --panel2:#181c25; --line:#272d38; --text:#f3f4f6; --muted:#929baa; --blue:#70a9ff; --green:#55c98f; --red:#ef6f78; --amber:#e6b85c; }
+  * { box-sizing:border-box; }
+  body { font-family:Inter,ui-sans-serif,system-ui,sans-serif; background:var(--bg); color:var(--text); margin:0; }
+  main { max-width:1240px; margin:auto; padding:24px; }
+  .hero { display:grid; grid-template-columns:1.7fr .7fr; gap:28px; align-items:end; padding:34px 0 28px; border-bottom:1px solid var(--line); margin-bottom:24px; }
+  h1 { font-size:clamp(2.5rem,6vw,4.8rem); line-height:.94; letter-spacing:-.06em; margin:10px 0 16px; max-width:850px; }
+  .lead { color:var(--muted); font-size:1rem; max-width:700px; margin:0; }
+  .eyebrow,.label { color:var(--blue); font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; }
+  .snapshot { border-left:1px solid var(--line); padding-left:20px; color:var(--muted); }
+  #updated { color:var(--text); font-size:1.05rem; font-weight:700; margin:4px 0; }
   .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(340px,1fr)); gap:16px; }
-  .card { background:#1a1d24; border-radius:10px; padding:14px; }
-  .card h2 { font-size:0.95rem; margin:0 0 10px; color:#c7cbd4; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px; }
+  .card h2 { font-size:1rem; margin:0 0 12px; color:#d6dae2; }
   table { width:100%; border-collapse:collapse; font-size:0.82rem; }
-  td, th { padding:4px 6px; border-bottom:1px solid #2a2e37; text-align:left; }
-  .ok { color:#4caf50; } .stale { color:#e0a030; }
+  td, th { padding:8px 10px; border-bottom:1px solid var(--line); text-align:left; }
+  th { color:var(--muted); font-size:.68rem; text-transform:uppercase; letter-spacing:.08em; }
+  .ok,.positive { color:var(--green); } .stale,.warning { color:var(--amber); } .negative { color:var(--red); }
   canvas { max-height:280px; }
   .card.wide { margin-bottom:16px; }
   .card.wide .chart-box { position:relative; height:min(60vh, 480px); }
   .card.wide .chart-box canvas { max-height:none; }
+  .theses { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px; }
+  .thesis { border:1px solid var(--line); padding:18px; border-radius:12px; min-height:220px; }
+  .thesis h3 { margin:18px 0 6px; font-size:1.35rem; }
+  .metric { font-size:1.35rem; font-weight:700; margin:8px 0; }
+  .label { color:var(--muted); }
+  .method { color:#c7cbd4; font-size:.82rem; min-height:2.5em; }
+  #thesesWarning { color:#e0a030; font-size:.78rem; margin-top:10px; }
+  section { margin-bottom:16px; }
+  .section-head { display:flex; justify-content:space-between; gap:20px; align-items:end; margin:28px 0 12px; }
+  .section-head h2 { margin:0; font-size:1.2rem; }
+  .section-head p { margin:0; color:var(--muted); max-width:580px; text-align:right; }
+  .signals { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  .signal .value { font-size:1.65rem; font-weight:750; margin:8px 0 2px; }
+  .signal small { color:var(--muted); }
+  .toolbar { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+  button { border:1px solid var(--line); border-radius:99px; background:transparent; color:var(--muted); padding:7px 12px; cursor:pointer; }
+  button.active,button:hover { color:var(--text); background:var(--panel2); }
+  .table-wrap { overflow:auto; border:1px solid var(--line); border-radius:12px; }
+  .table-wrap table { min-width:720px; }
+  .tag { background:var(--panel2); color:var(--muted); border-radius:4px; padding:3px 6px; font-size:.68rem; }
+  footer { display:flex; justify-content:space-between; gap:20px; padding:22px 0; color:var(--muted); font-size:.75rem; }
+  @media(max-width:850px){.hero{grid-template-columns:1fr}.snapshot{border-left:0;border-top:1px solid var(--line);padding:14px 0 0}.signals{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.section-head p{text-align:left}}
+  @media(max-width:520px){main{padding:16px}.signals{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.theses{grid-template-columns:1fr}footer{flex-direction:column}}
 </style>
 </head>
-<body>
-<h1>Trader — resultados (actualizado una vez al día)</h1>
-<div id="updated">cargando…</div>
+<body><main>
+<header class="hero"><div><div class="eyebrow">Trader Research · laboratorio público</div><h1>Evidencia antes que narrativa.</h1><p class="lead">Tesis de inversión, régimen de mercado e instrumentos candidatos. Backtest y paper nunca se presentan como si fueran lo mismo.</p></div><div class="snapshot"><span>Último snapshot</span><div id="updated">cargando…</div><span id="coverage">verificando datos</span></div></header>
+<div class="section-head"><h2>Régimen de mercado</h2><p>Indicadores descriptivos para orientar investigación; no son recomendaciones.</p></div>
+<section id="marketSignals" class="signals"></section>
+<div class="section-head"><h2>Dos tesis, una sola página</h2><p>La cifra principal utiliza la evidencia más honesta disponible.</p></div>
+<div class="card wide">
+  <div id="theses" class="theses"></div>
+  <div id="thesesWarning"></div>
+</div>
+<div class="section-head"><h2>Instrumentos para investigar</h2><p>Clasificación mecánica por tendencia, momentum y RSI.</p></div>
+<section><div class="toolbar"><button class="active" data-filter="all">Todos</button><button data-filter="leader">Liderazgo</button><button data-filter="pullback">Pullback</button><button data-filter="defensive">Defensa</button></div><div class="table-wrap"><table><thead><tr><th>Instrumento</th><th>Rol</th><th>Precio</th><th>1 mes</th><th>6 meses</th><th>RSI 14</th><th>MA 200</th></tr></thead><tbody id="instrumentTable"></tbody></table></div></section>
+<div class="section-head"><h2>Telemetría del sistema</h2><p>Capital por book, distribución del edge y salud operativa.</p></div>
 <div class="card wide">
   <h2>P&amp;L por book</h2>
   <div class="chart-box"><canvas id="pnlChart"></canvas></div>
@@ -43,6 +82,34 @@ function esc(s) {
 }
 
 async function j(url) { const r = await fetch(url); return r.json(); }
+
+let market = [];
+const pct = value => value == null ? '—' : `${value >= 0 ? '+' : ''}${Number(value).toFixed(2)}%`;
+
+function role(x) {
+  if (x.group === 'defensive') return ['defensive','Defensa'];
+  if (x.above_200ma && x.ret_6m >= 15 && x.rsi14 >= 40) return ['leader','Liderazgo'];
+  if (x.above_200ma && x.ret_6m > 0 && x.rsi14 <= 45) return ['pullback','Pullback'];
+  return ['observe','Observación'];
+}
+
+function renderInstruments(filter='all') {
+  const rows = market.map(x => ({...x, role:role(x)})).filter(x => filter === 'all' || x.role[0] === filter).sort((a,b) => b.ret_6m-a.ret_6m);
+  document.getElementById('instrumentTable').innerHTML = rows.map(x => `<tr><td><strong>${esc(x.symbol)}</strong></td><td><span class="tag">${x.role[1]}</span></td><td>${Number(x.price).toLocaleString('es-MX')}</td><td class="${x.ret_1m>=0?'positive':'negative'}">${pct(x.ret_1m)}</td><td class="${x.ret_6m>=0?'positive':'negative'}">${pct(x.ret_6m)}</td><td>${Number(x.rsi14).toFixed(1)}</td><td class="${x.above_200ma?'positive':'negative'}">${x.above_200ma?'Sobre':'Bajo'}</td></tr>`).join('');
+}
+
+async function loadMarket() {
+  const data = await j('data/market_summary.json'); market = data.instruments || [];
+  const by = Object.fromEntries(market.map(x => [x.symbol,x]));
+  const sectors = market.filter(x => x.group === 'sector');
+  const breadth = Math.round(100 * sectors.filter(x => x.above_200ma).length / sectors.length);
+  const credit = (by.HYG?.ret_1m || 0) - (by.LQD?.ret_1m || 0);
+  const box = (label,value,detail,cls='') => `<article class="card signal"><div class="eyebrow">${label}</div><div class="value ${cls}">${value}</div><small>${detail}</small></article>`;
+  document.getElementById('marketSignals').innerHTML = box('Tendencia SPY',by.SPY?.above_200ma?'Positiva':'Negativa',`${pct(by.SPY?.ret_6m)} en 6 meses`,by.SPY?.above_200ma?'positive':'negative') + box('Amplitud sectorial',`${breadth}%`,`${sectors.filter(x=>x.above_200ma).length}/${sectors.length} sectores sobre MA200`,breadth>=60?'positive':'warning') + box('Volatilidad VIX',Number(by['^VIX']?.price||0).toFixed(1),'Nivel observado',by['^VIX']?.price<20?'positive':'warning') + box('Crédito HYG − LQD',pct(credit),'Momentum relativo a 1 mes',credit>=0?'positive':'warning');
+  document.getElementById('updated').textContent = data.as_of || '—';
+  document.getElementById('coverage').textContent = `${market.length} instrumentos observados`;
+  renderInstruments();
+}
 
 async function loadPnl() {
   const data = await j('data/pnl_summary.json');
@@ -93,8 +160,27 @@ async function loadHealth() {
     }).join('');
 }
 
-async function loadAll() { await Promise.all([loadPnl(), loadDims(), loadHealth()]); }
+async function loadTheses() {
+  const data = await j('data/theses_summary.json');
+  document.getElementById('theses').innerHTML = (data.theses || []).map(t => {
+    const live = t.live_return_pct;
+    const primary = live == null ? t.backtest_return_pct : live;
+    const evidence = live == null ? 'Backtest causal' : 'Paper / vivo';
+    const cls = primary >= 0 ? 'positive' : 'negative';
+    const secondary = t.benchmark_return_pct == null
+      ? `Backtest retrospectivo: ${pct(t.backtest_return_pct)}`
+      : `SPY: ${pct(t.benchmark_return_pct)} · exceso: ${pct(t.excess_return_pct)}`;
+    return `<article class="thesis"><div class="label">${esc(t.id)} · ${esc(t.status)}</div>`+
+      `<h3>${esc(t.name)}</h3><div class="method">${esc(t.method)}</div>`+
+      `<div class="metric ${cls}">${pct(primary)}</div><div class="label">${evidence}</div>`+
+      `<p>${esc(secondary)}</p></article>`;
+  }).join('');
+  document.getElementById('thesesWarning').textContent = data.warning || '';
+}
+
+document.querySelectorAll('button[data-filter]').forEach(button => button.addEventListener('click', () => { document.querySelectorAll('button[data-filter]').forEach(x=>x.classList.remove('active')); button.classList.add('active'); renderInstruments(button.dataset.filter); }));
+async function loadAll() { await Promise.all([loadMarket(), loadPnl(), loadDims(), loadHealth(), loadTheses()]); }
 loadAll();
 </script>
-</body>
+</main><footer></footer></body>
 </html>
