@@ -28,11 +28,20 @@
   .card.wide .chart-box { position:relative; height:min(60vh, 480px); }
   .card.wide .chart-box canvas { max-height:none; }
   .theses { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px; }
-  .thesis { border:1px solid var(--line); padding:18px; border-radius:12px; min-height:220px; }
+  .thesis { border:1px solid var(--line); padding:18px; border-radius:12px; min-height:220px; display:flex; flex-direction:column; }
+  .thesis[data-verdict="rejected"] { border-color:color-mix(in srgb,var(--red) 48%,var(--line)); }
   .thesis h3 { margin:18px 0 6px; font-size:1.35rem; }
   .metric { font-size:1.35rem; font-weight:700; margin:8px 0; }
   .label { color:var(--muted); }
   .method { color:#c7cbd4; font-size:.82rem; min-height:2.5em; }
+  .engine { display:flex; justify-content:space-between; gap:12px; margin:16px 0 2px; padding:10px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font-size:.76rem; }
+  .engine span:first-child { color:var(--muted); }
+  .np-verdict { margin-top:auto; padding:14px; background:color-mix(in srgb,var(--red) 8%,var(--panel2)); border-radius:9px; }
+  .np-score { display:flex; align-items:baseline; justify-content:space-between; gap:12px; }
+  .np-score strong { color:var(--red); font-size:1.4rem; }
+  .np-bar { height:5px; background:#292e37; border-radius:99px; overflow:hidden; margin:9px 0; }
+  .np-bar i { display:block; width:0%; height:100%; background:var(--green); }
+  .np-verdict small { color:var(--muted); line-height:1.45; display:block; }
   #thesesWarning { color:#e0a030; font-size:.78rem; margin-top:10px; }
   section { margin-bottom:16px; }
   .section-head { display:flex; justify-content:space-between; gap:20px; align-items:end; margin:28px 0 12px; }
@@ -56,7 +65,7 @@
 <header class="hero"><div><div class="eyebrow">Trader Research · laboratorio público</div><h1>Evidencia antes que narrativa.</h1><p class="lead">Tesis de inversión, régimen de mercado e instrumentos candidatos. Backtest y paper nunca se presentan como si fueran lo mismo.</p></div><div class="snapshot"><span>Último snapshot</span><div id="updated">cargando…</div><span id="coverage">verificando datos</span></div></header>
 <div class="section-head"><h2>Régimen de mercado</h2><p>Indicadores descriptivos para orientar investigación; no son recomendaciones.</p></div>
 <section id="marketSignals" class="signals"></section>
-<div class="section-head"><h2>Dos tesis, una sola página</h2><p>La cifra principal utiliza la evidencia más honesta disponible.</p></div>
+<div class="section-head"><h2>Dos tesis, una sola página</h2><p>Backtest, evidencia real y veredicto NP Brain se muestran por separado.</p></div>
 <div class="card wide">
   <div id="theses" class="theses"></div>
   <div id="thesesWarning"></div>
@@ -170,10 +179,13 @@ async function loadTheses() {
     const secondary = t.benchmark_return_pct == null
       ? `Backtest retrospectivo: ${pct(t.backtest_return_pct)}`
       : `SPY: ${pct(t.benchmark_return_pct)} · exceso: ${pct(t.excess_return_pct)}`;
-    return `<article class="thesis"><div class="label">${esc(t.id)} · ${esc(t.status)}</div>`+
+    const np = t.npbrain;
+    const npBlock = np ? `<div class="np-verdict"><div class="np-score"><span class="label">Veredicto NP Brain</span><strong>${esc(np.eurekas)}/${esc(np.experiments)} EUREKA</strong></div><div class="np-bar"><i style="width:${Math.round(100*np.eurekas/np.experiments)}%"></i></div><small>${esc(np.noise)} variantes clasificadas como ruido. Gate: ${esc(np.gate)}.</small></div>` : '';
+    return `<article class="thesis" data-verdict="${np?.eurekas === 0 || live < 0 ? 'rejected' : 'candidate'}"><div class="label">${esc(t.id)} · ${esc(t.status)}</div>`+
       `<h3>${esc(t.name)}</h3><div class="method">${esc(t.method)}</div>`+
+      `<div class="engine"><span>Motor / prueba</span><strong>${esc(t.engine || '—')}</strong></div>`+
       `<div class="metric ${cls}">${pct(primary)}</div><div class="label">${evidence}</div>`+
-      `<p>${esc(secondary)}</p></article>`;
+      `<p>${esc(secondary)}</p>${npBlock}</article>`;
   }).join('');
   document.getElementById('thesesWarning').textContent = data.warning || '';
 }

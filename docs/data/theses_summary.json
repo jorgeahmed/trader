@@ -5,6 +5,7 @@
     {
       "id": "ORIGINAL-T7",
       "name": "Cupo abierto · motor original",
+      "engine": "NP Brain · banco top-2000",
       "method": "Banco top-2000 aplicado retrospectivamente; sin límite de posiciones",
       "backtest_return_pct": 44.5,
       "live_return_pct": -9.23,
@@ -13,12 +14,20 @@
     {
       "id": "V2-T03",
       "name": "Pullback en tendencia · causal",
+      "engine": "NP Brain · trader_pullback_np_v1",
       "method": "Señal cierre D, entrada apertura D+1, costos y 75% de exposición máxima",
       "backtest_return_pct": 71.85,
       "benchmark_return_pct": 78.05,
       "excess_return_pct": -6.19,
       "max_drawdown_pct": -21.65,
-      "status": "CANDIDATA A WALK-FORWARD"
+      "status": "RUIDO · NO PROMOVIDA",
+      "npbrain": {
+        "experiments": 12,
+        "eurekas": 0,
+        "noise": 12,
+        "verdict": "RECHAZADA",
+        "gate": "Retorno exceso neto >15 bp/trade, ambas mitades temporales positivas, hit rate >52% y t-stat >1"
+      }
     }
   ]
 }
