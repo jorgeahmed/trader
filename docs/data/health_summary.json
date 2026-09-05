@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-09-04T22:52:05+00:00",
+  "as_of": "2026-09-05T22:52:05+00:00",
   "stale_threshold_minutes": 90,
   "system": {
     "total_mb": 921,
-    "used_mb": 146,
-    "available_mb": 774,
+    "used_mb": 161,
+    "available_mb": 759,
     "disk_avail_gb": 8.39
   },
   "jobs": [
@@ -12,72 +12,72 @@
       "name": "dashboard-summarize-cron.log",
       "last_line": "",
       "last_modified": "2026-08-28T12:00:01+00:00",
-      "minutes_since_update": 10732.1
+      "minutes_since_update": 12172.1
     },
     {
       "name": "fetch-daemon.log",
       "last_line": "  ✓ Features → data/meta/features_cycles.json",
-      "last_modified": "2026-09-04T19:22:36+00:00",
-      "minutes_since_update": 209.5
+      "last_modified": "2026-09-05T19:53:03+00:00",
+      "minutes_since_update": 179.0
     },
     {
       "name": "heavy-wrapper-skips.log",
       "last_line": "2026-08-27T23:50:22-06:00 saltado, lock ocupado tras 2s: echo no debería imprimirse",
       "last_modified": "2026-08-28T05:50:22+00:00",
-      "minutes_since_update": 11101.7
+      "minutes_since_update": 12541.7
     },
     {
       "name": "numerai-signals-score-cron.log",
       "last_line": "2026-09-04T09:45:01  CSV listo: 92 tickers, snapshot del 2026-09-04 (0.3h de antigüedad) -> numerai_signals_submission.csv",
       "last_modified": "2026-09-04T15:45:01+00:00",
-      "minutes_since_update": 427.1
+      "minutes_since_update": 1867.1
     },
     {
       "name": "numerai-signals-score.log",
       "last_line": "2026-09-04T09:45:01  CSV listo: 92 tickers, snapshot del 2026-09-04 (0.3h de antigüedad) -> numerai_signals_submission.csv",
       "last_modified": "2026-09-04T15:45:01+00:00",
-      "minutes_since_update": 427.1
+      "minutes_since_update": 1867.1
     },
     {
       "name": "numerai-signals-submit-cron.log",
       "last_line": "2026-09-04T09:47:01  DRY-RUN — no se sube nada (falta --live, o todavía en fase de validación del spec)",
       "last_modified": "2026-09-04T15:47:13+00:00",
-      "minutes_since_update": 424.9
+      "minutes_since_update": 1864.9
     },
     {
       "name": "numerai-signals-submit.log",
       "last_line": "2026-09-04T09:47:01  DRY-RUN — no se sube nada (falta --live, o todavía en fase de validación del spec)",
       "last_modified": "2026-09-04T15:47:01+00:00",
-      "minutes_since_update": 425.1
+      "minutes_since_update": 1865.1
     },
     {
       "name": "pi-failover-cron.log",
-      "last_line": "2026-09-04T16:45:07    Nada que hacer (sin posiciones abiertas, no es ventana de killswitch)",
-      "last_modified": "2026-09-04T22:45:07+00:00",
+      "last_line": "2026-09-05T16:45:07    Nada que hacer (sin posiciones abiertas, no es ventana de killswitch)",
+      "last_modified": "2026-09-05T22:45:07+00:00",
       "minutes_since_update": 7.0
     },
     {
       "name": "pi-failover.log",
-      "last_line": "2026-09-04T16:45:07    Nada que hacer (sin posiciones abiertas, no es ventana de killswitch)",
-      "last_modified": "2026-09-04T22:45:07+00:00",
+      "last_line": "2026-09-05T16:45:07    Nada que hacer (sin posiciones abiertas, no es ventana de killswitch)",
+      "last_modified": "2026-09-05T22:45:07+00:00",
       "minutes_since_update": 7.0
     },
     {
       "name": "publish-dashboard-cron.log",
       "last_line": "",
       "last_modified": "2026-09-02T23:00:01+00:00",
-      "minutes_since_update": 2872.1
+      "minutes_since_update": 4312.1
     },
     {
       "name": "shadow-base.log",
       "last_line": "    ABRIENDO ISRG         DN | consenso=68% edge=17% | $1060",
       "last_modified": "2026-08-28T15:18:51+00:00",
-      "minutes_since_update": 10533.2
+      "minutes_since_update": 11973.2
     },
     {
       "name": "health-monitor.log",
-      "last_line": "✅ 2026-09-04 22:45 UTC — ok",
-      "last_modified": "2026-09-04T22:45:03+00:00",
+      "last_line": "✅ 2026-09-05 22:45 UTC — ok",
+      "last_modified": "2026-09-05T22:45:03+00:00",
       "minutes_since_update": 7.0
     }
   ]
