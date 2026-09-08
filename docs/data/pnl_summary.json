@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-07T22:52:02+00:00",
+  "as_of": "2026-09-08T22:52:02+00:00",
   "dates": [
     "2026-06-29",
     "2026-06-30",
@@ -68,16 +68,17 @@
     "2026-09-04",
     "2026-09-05",
     "2026-09-06",
-    "2026-09-07"
+    "2026-09-07",
+    "2026-09-08"
   ],
   "books": [
     {
       "name": "live",
       "capital_inicial": 7984.38,
-      "cash": 7598.584491817466,
-      "equity": 7600.584504901515,
+      "cash": 7571.769656407354,
+      "equity": 7571.769656407354,
       "open_positions": 0,
-      "total_trades": 279,
+      "total_trades": 298,
       "equity_series": [
         9998.0,
         9979.84,
@@ -146,7 +147,8 @@
         16104.44,
         16050.8,
         7656.18,
-        7640.58
+        7640.58,
+        7590.17
       ]
     },
     {
@@ -157,6 +159,7 @@
       "open_positions": 0,
       "total_trades": 11,
       "equity_series": [
+        null,
         null,
         null,
         null,
@@ -302,6 +305,7 @@
         null,
         null,
         null,
+        null,
         null
       ]
     },
@@ -313,6 +317,7 @@
       "open_positions": 0,
       "total_trades": 42,
       "equity_series": [
+        null,
         null,
         null,
         null,
@@ -458,16 +463,17 @@
         null,
         null,
         null,
+        null,
         null
       ]
     },
     {
       "name": "mirror_control",
       "capital_inicial": 10000.0,
-      "cash": 10134.875660638632,
-      "equity": 10135.359595283071,
+      "cash": 10130.697660363145,
+      "equity": 10132.8756853805,
       "open_positions": 0,
-      "total_trades": 132,
+      "total_trades": 134,
       "equity_series": [
         null,
         null,
@@ -536,16 +542,17 @@
         10143.08,
         10141.38,
         10138.38,
-        10135.36
+        10135.36,
+        10132.88
       ]
     },
     {
       "name": "mirror_efficient",
       "capital_inicial": 10000.0,
-      "cash": 10119.494066034325,
-      "equity": 10120.324716992269,
+      "cash": 10116.500730834443,
+      "equity": 10117.494068824168,
       "open_positions": 0,
-      "total_trades": 127,
+      "total_trades": 129,
       "equity_series": [
         null,
         null,
@@ -614,16 +621,17 @@
         10127.3,
         10128.35,
         10124.35,
-        10120.32
+        10120.32,
+        10117.49
       ]
     },
     {
       "name": "riesgo",
       "capital_inicial": 859.37,
-      "cash": 717.3239635540656,
-      "equity": 717.3239635540656,
+      "cash": 715.1276140663667,
+      "equity": 715.1276140663667,
       "open_positions": 0,
-      "total_trades": 111,
+      "total_trades": 114,
       "equity_series": [
         null,
         null,
@@ -692,14 +700,15 @@
         1342.4,
         1339.74,
         728.36,
-        722.36
+        722.36,
+        715.13
       ]
     },
     {
       "name": "riesgo_shadow",
       "capital_inicial": 2000.0,
       "cash": 888.4384636414511,
-      "equity": 1928.464321057177,
+      "equity": 1912.0044081580374,
       "open_positions": 2,
       "total_trades": 41,
       "equity_series": [
@@ -770,6 +779,7 @@
         null,
         1930.42,
         1928.92,
+        null,
         null
       ]
     },
@@ -848,6 +858,7 @@
         null,
         null,
         null,
+        null,
         null
       ]
     },
@@ -855,7 +866,7 @@
       "name": "shadow_base",
       "capital_inicial": 10000.0,
       "cash": 8018.459132495772,
-      "equity": 9976.177587690596,
+      "equity": 9921.720031032271,
       "open_positions": 2,
       "total_trades": 42,
       "equity_series": [
@@ -926,6 +937,7 @@
         null,
         9980.18,
         9976.18,
+        null,
         null
       ]
     },
@@ -933,7 +945,7 @@
       "name": "shadow_base_escalation",
       "capital_inicial": 10000.0,
       "cash": 8033.474623434586,
-      "equity": 9954.73793852858,
+      "equity": 9914.35598833876,
       "open_positions": 2,
       "total_trades": 44,
       "equity_series": [
@@ -1004,14 +1016,15 @@
         9954.3,
         9960.75,
         9956.75,
-        9952.75
+        9952.75,
+        null
       ]
     },
     {
       "name": "shadow_control",
       "capital_inicial": 10000.0,
       "cash": 8014.574790344434,
-      "equity": 9971.344808099835,
+      "equity": 9916.913634827391,
       "open_positions": 2,
       "total_trades": 42,
       "equity_series": [
@@ -1082,6 +1095,7 @@
         null,
         9975.35,
         9971.34,
+        null,
         null
       ]
     },
@@ -1089,7 +1103,7 @@
       "name": "shadow_efficient",
       "capital_inicial": 10000.0,
       "cash": 7958.863760936223,
-      "equity": 10020.489995813665,
+      "equity": 9946.58513652625,
       "open_positions": 2,
       "total_trades": 44,
       "equity_series": [
@@ -1160,6 +1174,7 @@
         null,
         10024.49,
         10020.49,
+        null,
         null
       ]
     },
@@ -1167,7 +1182,7 @@
       "name": "shadow_efficient_escalation",
       "capital_inicial": 10000.0,
       "cash": 7985.995711492232,
-      "equity": 10054.6481582451,
+      "equity": 9980.491421949477,
       "open_positions": 2,
       "total_trades": 46,
       "equity_series": [
@@ -1238,16 +1253,17 @@
         10050.42,
         10058.65,
         10054.65,
+        null,
         null
       ]
     },
     {
       "name": "shadow_efficient_sinlimite",
       "capital_inicial": 10000.0,
-      "cash": 8500.513856739264,
-      "equity": 8511.6183369107,
+      "cash": 8433.855108765814,
+      "equity": 8433.855108765814,
       "open_positions": 0,
-      "total_trades": 666,
+      "total_trades": 708,
       "equity_series": [
         null,
         null,
@@ -1316,16 +1332,17 @@
         9092.4,
         8869.2,
         8844.22,
-        8704.34
+        8704.34,
+        8438.0
       ]
     },
     {
       "name": "shadow_tesis6",
       "capital_inicial": 10000.0,
-      "cash": 6958.725417413984,
-      "equity": 6991.725489640209,
+      "cash": 6108.29494064541,
+      "equity": 6137.853281055598,
       "open_positions": 0,
-      "total_trades": 1523,
+      "total_trades": 1952,
       "equity_series": [
         null,
         null,
@@ -1391,10 +1408,11 @@
         null,
         null,
         null,
-        7980.61,
-        7915.73,
-        7849.73,
-        6991.73
+        null,
+        null,
+        null,
+        6991.73,
+        6137.85
       ]
     },
     {
@@ -1472,6 +1490,7 @@
         null,
         null,
         534.75,
+        null,
         null
       ]
     },
@@ -1550,17 +1569,19 @@
         null,
         1486.41,
         1486.41,
+        null,
         null
       ]
     },
     {
       "name": "turbo",
       "capital_inicial": 50000.0,
-      "cash": 24270.07926445258,
-      "equity": 49428.39187099204,
-      "open_positions": 8,
-      "total_trades": 199,
+      "cash": 30934.42909981623,
+      "equity": 49366.27836263876,
+      "open_positions": 6,
+      "total_trades": 208,
       "equity_series": [
+        null,
         null,
         null,
         null,
@@ -1634,11 +1655,12 @@
     {
       "name": "turbo_shadow",
       "capital_inicial": 50000.0,
-      "cash": 24085.876089148253,
-      "equity": 49052.81541309698,
-      "open_positions": 8,
-      "total_trades": 195,
+      "cash": 28255.120286692025,
+      "equity": 49075.499874076435,
+      "open_positions": 6,
+      "total_trades": 204,
       "equity_series": [
+        null,
         null,
         null,
         null,
