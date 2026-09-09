@@ -1,20 +1,20 @@
 {
-  "as_of": "2026-09-08T22:52:05+00:00",
-  "total_active": 3896,
+  "as_of": "2026-09-09T22:52:05+00:00",
+  "total_active": 3874,
   "edge_distribution": {
     "-0.25": 1,
     "-0.20": 2,
     "-0.15": 14,
-    "-0.10": 98,
+    "-0.10": 95,
     "-0.05": 17,
-    "0.00": 35,
-    "0.05": 946,
-    "0.10": 1920,
-    "0.15": 554,
-    "0.20": 205,
+    "0.00": 34,
+    "0.05": 940,
+    "0.10": 1910,
+    "0.15": 553,
+    "0.20": 203,
     "0.25": 68,
     "0.30": 28,
-    "0.35": 4,
+    "0.35": 5,
     "0.40": 4
   },
   "top_dims": [
@@ -44,6 +44,13 @@
       "symbol": "ISRG",
       "edge": 0.4,
       "accuracy": 0.9,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_dx-y_nyb_lag5_aapl",
+      "symbol": "AAPL",
+      "edge": 0.35,
+      "accuracy": 0.85,
       "n": 20
     },
     {
@@ -147,13 +154,6 @@
     {
       "dim_id": "xcorr_amxb_mx_lag3_gmexicob_mx",
       "symbol": "GMEXICOB.MX",
-      "edge": 0.3,
-      "accuracy": 0.8,
-      "n": 20
-    },
-    {
-      "dim_id": "xcorr_gmexicob_mx_lag5_usdmxnx_usdmxn=x",
-      "symbol": "USDMXN=X",
       "edge": 0.3,
       "accuracy": 0.8,
       "n": 20
