@@ -1,30 +1,23 @@
 {
-  "as_of": "2026-09-11T22:52:05+00:00",
-  "total_active": 3855,
+  "as_of": "2026-09-12T22:52:05+00:00",
+  "total_active": 3776,
   "edge_distribution": {
     "-0.25": 1,
     "-0.20": 2,
     "-0.15": 14,
-    "-0.10": 94,
+    "-0.10": 90,
     "-0.05": 17,
     "0.00": 33,
-    "0.05": 932,
-    "0.10": 1896,
-    "0.15": 557,
+    "0.05": 904,
+    "0.10": 1866,
+    "0.15": 548,
     "0.20": 204,
-    "0.25": 68,
-    "0.30": 28,
+    "0.25": 64,
+    "0.30": 25,
     "0.35": 5,
-    "0.40": 4
+    "0.40": 3
   },
   "top_dims": [
-    {
-      "dim_id": "xcorr_vix_lag1_lin",
-      "symbol": "LIN",
-      "edge": 0.4,
-      "accuracy": 0.9,
-      "n": 20
-    },
     {
       "dim_id": "xcorr_aapl_lag3_eog",
       "symbol": "EOG",
@@ -145,15 +138,22 @@
       "n": 20
     },
     {
-      "dim_id": "xcorr_amxb_mx_lag4_meta",
-      "symbol": "META",
+      "dim_id": "xcorr_amxb_mx_lag3_gmexicob_mx",
+      "symbol": "GMEXICOB.MX",
       "edge": 0.3,
       "accuracy": 0.8,
       "n": 20
     },
     {
-      "dim_id": "xcorr_amxb_mx_lag3_gmexicob_mx",
-      "symbol": "GMEXICOB.MX",
+      "dim_id": "xcorr_gmexicob_mx_lag5_usdmxnx_usdmxn=x",
+      "symbol": "USDMXN=X",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_eurusdx_lag7_dx-y_nyb",
+      "symbol": "DX-Y.NYB",
       "edge": 0.3,
       "accuracy": 0.8,
       "n": 20
