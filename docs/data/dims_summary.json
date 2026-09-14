@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-09-13T22:52:05+00:00",
-  "total_active": 3593,
+  "as_of": "2026-09-14T22:52:05+00:00",
+  "total_active": 3579,
   "edge_distribution": {
     "-0.25": 1,
     "-0.20": 1,
@@ -8,12 +8,12 @@
     "-0.10": 88,
     "-0.05": 16,
     "0.00": 33,
-    "0.05": 872,
-    "0.10": 1772,
-    "0.15": 508,
-    "0.20": 195,
-    "0.25": 61,
-    "0.30": 24,
+    "0.05": 869,
+    "0.10": 1765,
+    "0.15": 510,
+    "0.20": 193,
+    "0.25": 60,
+    "0.30": 21,
     "0.35": 5,
     "0.40": 3
   },
@@ -96,20 +96,6 @@
       "n": 20
     },
     {
-      "dim_id": "xcorr_mxx_lag1_meta",
-      "symbol": "META",
-      "edge": 0.3,
-      "accuracy": 0.8,
-      "n": 20
-    },
-    {
-      "dim_id": "xcorr_femsaubd_mx_lag1_v",
-      "symbol": "V",
-      "edge": 0.3,
-      "accuracy": 0.8,
-      "n": 20
-    },
-    {
       "dim_id": "xcorr_femsaubd_mx_lag1_ge",
       "symbol": "GE",
       "edge": 0.3,
@@ -145,18 +131,32 @@
       "n": 20
     },
     {
-      "dim_id": "xcorr_gmexicob_mx_lag5_usdmxnx_usdmxn=x",
-      "symbol": "USDMXN=X",
-      "edge": 0.3,
-      "accuracy": 0.8,
-      "n": 20
-    },
-    {
       "dim_id": "xcorr_eurusdx_lag7_dx-y_nyb",
       "symbol": "DX-Y.NYB",
       "edge": 0.3,
       "accuracy": 0.8,
       "n": 20
+    },
+    {
+      "dim_id": "xcorr_dx-y_nyb_lag7_nvda",
+      "symbol": "NVDA",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_meta_lag3_xle",
+      "symbol": "XLE",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 40
+    },
+    {
+      "dim_id": "xcorr_pfe_lag5_xle",
+      "symbol": "XLE",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 40
     }
   ],
   "bottom_dims": [
