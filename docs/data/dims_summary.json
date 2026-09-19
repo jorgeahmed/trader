@@ -1,20 +1,20 @@
 {
-  "as_of": "2026-09-18T22:52:05+00:00",
-  "total_active": 3509,
+  "as_of": "2026-09-19T22:52:05+00:00",
+  "total_active": 3486,
   "edge_distribution": {
     "-0.25": 1,
     "-0.15": 14,
-    "-0.10": 85,
+    "-0.10": 84,
     "-0.05": 13,
     "0.00": 31,
-    "0.05": 845,
-    "0.10": 1739,
-    "0.15": 504,
-    "0.20": 192,
-    "0.25": 56,
-    "0.30": 21,
+    "0.05": 839,
+    "0.10": 1735,
+    "0.15": 498,
+    "0.20": 191,
+    "0.25": 55,
+    "0.30": 18,
     "0.35": 5,
-    "0.40": 3
+    "0.40": 2
   },
   "top_dims": [
     {
@@ -26,13 +26,6 @@
     },
     {
       "dim_id": "xcorr_jpm_lag6_isrg",
-      "symbol": "ISRG",
-      "edge": 0.4,
-      "accuracy": 0.9,
-      "n": 20
-    },
-    {
-      "dim_id": "xcorr_mrk_lag6_isrg",
       "symbol": "ISRG",
       "edge": 0.4,
       "accuracy": 0.9,
@@ -144,18 +137,25 @@
       "n": 20
     },
     {
-      "dim_id": "xcorr_meta_lag3_xle",
-      "symbol": "XLE",
+      "dim_id": "xcorr_msft_lag3_uso",
+      "symbol": "USO",
       "edge": 0.3,
       "accuracy": 0.8,
       "n": 40
     },
     {
-      "dim_id": "xcorr_pfe_lag5_xle",
-      "symbol": "XLE",
+      "dim_id": "xcorr_qqq_lag7_sbux",
+      "symbol": "SBUX",
       "edge": 0.3,
       "accuracy": 0.8,
-      "n": 40
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_nvda_lag5_abbv",
+      "symbol": "ABBV",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
     }
   ],
   "bottom_dims": [
