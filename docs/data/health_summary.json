@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-09-19T22:52:05+00:00",
+  "as_of": "2026-09-20T22:52:06+00:00",
   "stale_threshold_minutes": 90,
   "system": {
     "total_mb": 921,
-    "used_mb": 135,
-    "available_mb": 785,
-    "disk_avail_gb": 8.05
+    "used_mb": 156,
+    "available_mb": 764,
+    "disk_avail_gb": 8.0
   },
   "jobs": [
     {
       "name": "dashboard-summarize-cron.log",
       "last_line": "",
       "last_modified": "2026-08-28T12:00:01+00:00",
-      "minutes_since_update": 32332.1
+      "minutes_since_update": 33772.1
     },
     {
       "name": "fetch-daemon.log",
       "last_line": "  ✓ Features → data/meta/features_cycles.json",
-      "last_modified": "2026-09-19T17:27:32+00:00",
-      "minutes_since_update": 324.6
+      "last_modified": "2026-09-20T17:57:12+00:00",
+      "minutes_since_update": 294.9
     },
     {
       "name": "heavy-wrapper-skips.log",
       "last_line": "2026-08-27T23:50:22-06:00 saltado, lock ocupado tras 2s: echo no debería imprimirse",
       "last_modified": "2026-08-28T05:50:22+00:00",
-      "minutes_since_update": 32701.7
+      "minutes_since_update": 34141.7
     },
     {
       "name": "killswitch.log",
       "last_line": "  Capital total del sistema: $19,500",
-      "last_modified": "2026-09-13T12:00:20+00:00",
-      "minutes_since_update": 9291.8
+      "last_modified": "2026-09-20T12:00:19+00:00",
+      "minutes_since_update": 651.8
     },
     {
       "name": "numerai-signals-score-cron.log",
       "last_line": "2026-09-18T09:45:01  ABORTA: snapshot tiene 24.3h de antigüedad (máx 20h) — mejor no someter con datos viejos",
       "last_modified": "2026-09-18T15:45:01+00:00",
-      "minutes_since_update": 1867.1
+      "minutes_since_update": 3307.1
     },
     {
       "name": "numerai-signals-score.log",
       "last_line": "2026-09-18T09:45:01  ABORTA: snapshot tiene 24.3h de antigüedad (máx 20h) — mejor no someter con datos viejos",
       "last_modified": "2026-09-18T15:45:01+00:00",
-      "minutes_since_update": 1867.1
+      "minutes_since_update": 3307.1
     },
     {
       "name": "numerai-signals-submit-cron.log",
       "last_line": "2026-09-18T09:47:01  DRY-RUN — no se sube nada (falta --live, o todavía en fase de validación del spec)",
       "last_modified": "2026-09-18T15:47:13+00:00",
-      "minutes_since_update": 1864.9
+      "minutes_since_update": 3304.9
     },
     {
       "name": "numerai-signals-submit.log",
       "last_line": "2026-09-18T09:47:01  DRY-RUN — no se sube nada (falta --live, o todavía en fase de validación del spec)",
       "last_modified": "2026-09-18T15:47:01+00:00",
-      "minutes_since_update": 1865.1
+      "minutes_since_update": 3305.1
     },
     {
       "name": "pi-failover-cron.log",
-      "last_line": "2026-09-19T16:45:02  Mac despierto — no hago nada",
-      "last_modified": "2026-09-19T22:45:02+00:00",
-      "minutes_since_update": 7.1
+      "last_line": "2026-09-20T16:45:07    Nada que hacer (sin posiciones abiertas, no es ventana de killswitch)",
+      "last_modified": "2026-09-20T22:45:07+00:00",
+      "minutes_since_update": 7.0
     },
     {
       "name": "pi-failover.log",
-      "last_line": "2026-09-19T16:45:02  Mac despierto — no hago nada",
-      "last_modified": "2026-09-19T22:45:02+00:00",
-      "minutes_since_update": 7.1
+      "last_line": "2026-09-20T16:45:07    Nada que hacer (sin posiciones abiertas, no es ventana de killswitch)",
+      "last_modified": "2026-09-20T22:45:07+00:00",
+      "minutes_since_update": 7.0
     },
     {
       "name": "publish-dashboard-cron.log",
       "last_line": "",
       "last_modified": "2026-09-02T23:00:01+00:00",
-      "minutes_since_update": 24472.1
+      "minutes_since_update": 25912.1
     },
     {
       "name": "shadow-base.log",
       "last_line": "    ABRIENDO ISRG         DN | consenso=68% edge=17% | $1060",
       "last_modified": "2026-08-28T15:18:51+00:00",
-      "minutes_since_update": 32133.2
+      "minutes_since_update": 33573.2
     },
     {
       "name": "health-monitor.log",
-      "last_line": "✅ 2026-09-19 22:45 UTC — ok",
-      "last_modified": "2026-09-19T22:45:03+00:00",
+      "last_line": "⚠️ 2026-09-20 22:45 UTC — fallo #14: HTTP Error 530: <none>",
+      "last_modified": "2026-09-20T22:45:03+00:00",
       "minutes_since_update": 7.0
     }
   ]

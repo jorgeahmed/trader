@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-19T22:52:02+00:00",
+  "as_of": "2026-09-20T22:52:02+00:00",
   "dates": [
     "2026-06-29",
     "2026-06-30",
@@ -343,8 +343,8 @@
     },
     {
       "name": "medterm",
-      "capital_inicial": 14289.07,
-      "cash": 4163.3,
+      "capital_inicial": 14367.19,
+      "cash": 4241.42,
       "equity": null,
       "open_positions": 0,
       "total_trades": 47,
@@ -1561,8 +1561,8 @@
     },
     {
       "name": "shorts",
-      "capital_inicial": 406.25,
-      "cash": 310.33940043042435,
+      "capital_inicial": 328.13,
+      "cash": 232.22,
       "equity": 312.07242946007835,
       "open_positions": 0,
       "total_trades": 69,

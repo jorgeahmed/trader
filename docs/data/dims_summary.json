@@ -1,29 +1,22 @@
 {
-  "as_of": "2026-09-19T22:52:05+00:00",
-  "total_active": 3486,
+  "as_of": "2026-09-20T22:52:06+00:00",
+  "total_active": 3369,
   "edge_distribution": {
     "-0.25": 1,
     "-0.15": 14,
     "-0.10": 84,
     "-0.05": 13,
     "0.00": 31,
-    "0.05": 839,
-    "0.10": 1735,
-    "0.15": 498,
-    "0.20": 191,
-    "0.25": 55,
-    "0.30": 18,
+    "0.05": 821,
+    "0.10": 1678,
+    "0.15": 467,
+    "0.20": 185,
+    "0.25": 52,
+    "0.30": 17,
     "0.35": 5,
-    "0.40": 2
+    "0.40": 1
   },
   "top_dims": [
-    {
-      "dim_id": "xcorr_aapl_lag3_eog",
-      "symbol": "EOG",
-      "edge": 0.4,
-      "accuracy": 0.9,
-      "n": 20
-    },
     {
       "dim_id": "xcorr_jpm_lag6_isrg",
       "symbol": "ISRG",
@@ -109,13 +102,6 @@
       "n": 20
     },
     {
-      "dim_id": "xcorr_fcx_lag7_lin",
-      "symbol": "LIN",
-      "edge": 0.3,
-      "accuracy": 0.8,
-      "n": 20
-    },
-    {
       "dim_id": "xcorr_amxb_mx_lag3_gmexicob_mx",
       "symbol": "GMEXICOB.MX",
       "edge": 0.3,
@@ -152,6 +138,20 @@
     },
     {
       "dim_id": "xcorr_nvda_lag5_abbv",
+      "symbol": "ABBV",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_iwm_lag7_xlre",
+      "symbol": "XLRE",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_gspc_lag5_abbv",
       "symbol": "ABBV",
       "edge": 0.3,
       "accuracy": 0.8,
