@@ -1,18 +1,17 @@
 {
-  "as_of": "2026-09-24T22:52:05+00:00",
-  "total_active": 3295,
+  "as_of": "2026-09-25T22:52:06+00:00",
+  "total_active": 3263,
   "edge_distribution": {
-    "-0.25": 1,
-    "-0.15": 14,
-    "-0.10": 82,
-    "-0.05": 13,
+    "-0.15": 13,
+    "-0.10": 81,
+    "-0.05": 12,
     "0.00": 31,
-    "0.05": 791,
-    "0.10": 1648,
-    "0.15": 466,
-    "0.20": 180,
-    "0.25": 46,
-    "0.30": 17,
+    "0.05": 783,
+    "0.10": 1635,
+    "0.15": 463,
+    "0.20": 179,
+    "0.25": 45,
+    "0.30": 15,
     "0.35": 5,
     "0.40": 1
   },
@@ -95,13 +94,6 @@
       "n": 20
     },
     {
-      "dim_id": "xcorr_jnj_lag5_nvda",
-      "symbol": "NVDA",
-      "edge": 0.3,
-      "accuracy": 0.8,
-      "n": 20
-    },
-    {
       "dim_id": "xcorr_amxb_mx_lag3_gmexicob_mx",
       "symbol": "GMEXICOB.MX",
       "edge": 0.3,
@@ -121,13 +113,6 @@
       "edge": 0.3,
       "accuracy": 0.8,
       "n": 20
-    },
-    {
-      "dim_id": "xcorr_msft_lag3_uso",
-      "symbol": "USO",
-      "edge": 0.3,
-      "accuracy": 0.8,
-      "n": 40
     },
     {
       "dim_id": "xcorr_qqq_lag7_sbux",
@@ -156,9 +141,37 @@
       "edge": 0.3,
       "accuracy": 0.8,
       "n": 20
+    },
+    {
+      "dim_id": "xcorr_gspc_lag7_sbux",
+      "symbol": "SBUX",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
+    },
+    {
+      "dim_id": "xcorr_tsm_lag4_isrg",
+      "symbol": "ISRG",
+      "edge": 0.3,
+      "accuracy": 0.8,
+      "n": 20
     }
   ],
   "bottom_dims": [
+    {
+      "dim_id": "flow_xom_lag3_jnj",
+      "symbol": "JNJ",
+      "edge": -0.1,
+      "accuracy": 0.0,
+      "n": 34
+    },
+    {
+      "dim_id": "flow_xom_lag2_lly",
+      "symbol": "LLY",
+      "edge": -0.1,
+      "accuracy": 0.0,
+      "n": 34
+    },
     {
       "dim_id": "flow_xom_lag1_walmex_mx",
       "symbol": "WALMEX.MX",
@@ -265,13 +278,6 @@
       "n": 20
     },
     {
-      "dim_id": "xcorr_dx-y_nyb_lag4_vix",
-      "symbol": "^VIX",
-      "edge": -0.15,
-      "accuracy": 0.35,
-      "n": 20
-    },
-    {
       "dim_id": "xcorr_spy_lag5_qqq",
       "symbol": "QQQ",
       "edge": -0.15,
@@ -290,13 +296,6 @@
       "symbol": "UNH",
       "edge": -0.15,
       "accuracy": 0.35,
-      "n": 20
-    },
-    {
-      "dim_id": "xcorr_mxx_lag5_wmt",
-      "symbol": "WMT",
-      "edge": -0.25,
-      "accuracy": 0.25,
       "n": 20
     }
   ]
