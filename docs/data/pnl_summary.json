@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-26T22:52:02+00:00",
+  "as_of": "2026-09-27T22:52:02+00:00",
   "dates": [
     "2026-06-29",
     "2026-06-30",
@@ -82,8 +82,8 @@
   "books": [
     {
       "name": "live",
-      "capital_inicial": 3953.13,
-      "cash": 3415.140499683895,
+      "capital_inicial": 2019.53,
+      "cash": 1481.54,
       "equity": 3420.7371766496217,
       "open_positions": 0,
       "total_trades": 352,
@@ -343,8 +343,8 @@
     },
     {
       "name": "medterm",
-      "capital_inicial": 14367.19,
-      "cash": 4241.42,
+      "capital_inicial": 16453.13,
+      "cash": 6327.36,
       "equity": null,
       "open_positions": 0,
       "total_trades": 47,
@@ -691,8 +691,8 @@
     },
     {
       "name": "riesgo",
-      "capital_inicial": 554.68,
-      "cash": 389.984407787896,
+      "capital_inicial": 402.34,
+      "cash": 237.64,
       "equity": 391.32969314764694,
       "open_positions": 0,
       "total_trades": 129,
