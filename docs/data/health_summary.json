@@ -1,90 +1,90 @@
 {
-  "as_of": "2026-09-29T22:52:05+00:00",
+  "as_of": "2026-09-30T22:52:06+00:00",
   "stale_threshold_minutes": 90,
   "system": {
     "total_mb": 921,
-    "used_mb": 138,
-    "available_mb": 782,
-    "disk_avail_gb": 6.55
+    "used_mb": 156,
+    "available_mb": 765,
+    "disk_avail_gb": 6.32
   },
   "jobs": [
     {
       "name": "dashboard-summarize-cron.log",
       "last_line": "",
       "last_modified": "2026-08-28T12:00:01+00:00",
-      "minutes_since_update": 46732.1
+      "minutes_since_update": 48172.1
     },
     {
       "name": "fetch-daemon.log",
       "last_line": "  ✓ Features → data/meta/features_cycles.json",
-      "last_modified": "2026-09-29T19:56:08+00:00",
-      "minutes_since_update": 175.9
+      "last_modified": "2026-09-30T20:25:59+00:00",
+      "minutes_since_update": 146.1
     },
     {
       "name": "heavy-wrapper-skips.log",
       "last_line": "2026-08-27T23:50:22-06:00 saltado, lock ocupado tras 2s: echo no debería imprimirse",
       "last_modified": "2026-08-28T05:50:22+00:00",
-      "minutes_since_update": 47101.7
+      "minutes_since_update": 48541.7
     },
     {
       "name": "killswitch.log",
       "last_line": "  Capital total del sistema: $19,500",
       "last_modified": "2026-09-27T12:15:20+00:00",
-      "minutes_since_update": 3516.8
+      "minutes_since_update": 4956.8
     },
     {
       "name": "numerai-signals-score-cron.log",
-      "last_line": "2026-09-29T09:45:01  CSV listo: 92 tickers, snapshot del 2026-09-29 (0.3h de antigüedad) -> numerai_signals_submission.csv",
-      "last_modified": "2026-09-29T15:45:01+00:00",
+      "last_line": "2026-09-30T09:45:01  CSV listo: 92 tickers, snapshot del 2026-09-30 (0.3h de antigüedad) -> numerai_signals_submission.csv",
+      "last_modified": "2026-09-30T15:45:01+00:00",
       "minutes_since_update": 427.1
     },
     {
       "name": "numerai-signals-score.log",
-      "last_line": "2026-09-29T09:45:01  CSV listo: 92 tickers, snapshot del 2026-09-29 (0.3h de antigüedad) -> numerai_signals_submission.csv",
-      "last_modified": "2026-09-29T15:45:01+00:00",
+      "last_line": "2026-09-30T09:45:01  CSV listo: 92 tickers, snapshot del 2026-09-30 (0.3h de antigüedad) -> numerai_signals_submission.csv",
+      "last_modified": "2026-09-30T15:45:01+00:00",
       "minutes_since_update": 427.1
     },
     {
       "name": "numerai-signals-submit-cron.log",
-      "last_line": "2026-09-29T09:47:01  DRY-RUN — no se sube nada (falta --live, o todavía en fase de validación del spec)",
-      "last_modified": "2026-09-29T15:47:13+00:00",
+      "last_line": "2026-09-30T09:47:02  DRY-RUN — no se sube nada (falta --live, o todavía en fase de validación del spec)",
+      "last_modified": "2026-09-30T15:47:13+00:00",
       "minutes_since_update": 424.9
     },
     {
       "name": "numerai-signals-submit.log",
-      "last_line": "2026-09-29T09:47:01  DRY-RUN — no se sube nada (falta --live, o todavía en fase de validación del spec)",
-      "last_modified": "2026-09-29T15:47:01+00:00",
+      "last_line": "2026-09-30T09:47:02  DRY-RUN — no se sube nada (falta --live, o todavía en fase de validación del spec)",
+      "last_modified": "2026-09-30T15:47:02+00:00",
       "minutes_since_update": 425.1
     },
     {
       "name": "pi-failover-cron.log",
-      "last_line": "2026-09-29T16:45:02  Mac despierto — no hago nada",
-      "last_modified": "2026-09-29T22:45:02+00:00",
+      "last_line": "2026-09-30T16:45:02  Mac despierto — no hago nada",
+      "last_modified": "2026-09-30T22:45:02+00:00",
       "minutes_since_update": 7.1
     },
     {
       "name": "pi-failover.log",
-      "last_line": "2026-09-29T16:45:02  Mac despierto — no hago nada",
-      "last_modified": "2026-09-29T22:45:02+00:00",
+      "last_line": "2026-09-30T16:45:02  Mac despierto — no hago nada",
+      "last_modified": "2026-09-30T22:45:02+00:00",
       "minutes_since_update": 7.1
     },
     {
       "name": "publish-dashboard-cron.log",
       "last_line": "",
       "last_modified": "2026-09-02T23:00:01+00:00",
-      "minutes_since_update": 38872.1
+      "minutes_since_update": 40312.1
     },
     {
       "name": "shadow-base.log",
       "last_line": "    ABRIENDO ISRG         DN | consenso=68% edge=17% | $1060",
       "last_modified": "2026-08-28T15:18:51+00:00",
-      "minutes_since_update": 46533.2
+      "minutes_since_update": 47973.2
     },
     {
       "name": "health-monitor.log",
-      "last_line": "✅ 2026-09-29 22:45 UTC — ok",
-      "last_modified": "2026-09-29T22:45:03+00:00",
-      "minutes_since_update": 7.0
+      "last_line": "✅ 2026-09-30 22:45 UTC — ok",
+      "last_modified": "2026-09-30T22:45:23+00:00",
+      "minutes_since_update": 6.7
     }
   ]
 }
